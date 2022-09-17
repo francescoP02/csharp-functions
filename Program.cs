@@ -20,6 +20,16 @@ Console.WriteLine("Ecco la lista di controllo dei numeri non elevati al quadrato
 
 StampaArray(numbers);
 
+Console.WriteLine();
+
+int somma = sommaElementiArray(numbers);
+
+Console.WriteLine($"Somma lista di numeri: {somma}");
+
+int somma2 = sommaElementiArray(numbers2);
+
+Console.WriteLine($"Somma lista di numeri: {somma2}");
+
 
 
 
@@ -63,4 +73,18 @@ int[] ElevaArrayAlQuadrato(int[] array)
     }
 
     return squared;
+}
+
+//Funzione creazione array con somma numeri
+
+int sommaElementiArray(int[] array)
+{
+    int sum = 0;
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        sum += array[i];
+    }
+
+    return sum;
 }
