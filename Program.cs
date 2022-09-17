@@ -1,6 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-int[] numbers = { 2, 6, 7, 5, 3, 9 };
+Console.WriteLine("Quanti numeri vuoi inserire?");
+
+int answer = Convert.ToInt32(Console.ReadLine());
+
+int[] numbers = new int[answer];
+
+for (int i = 0; i < answer; i++)
+{
+    Console.WriteLine($"Inserisci un numero: ({(answer - i)} rimanenti)");
+
+    numbers[i] = Convert.ToInt32(Console.ReadLine());
+}
 
 Console.WriteLine("Ecco la lista di numeri");
 
